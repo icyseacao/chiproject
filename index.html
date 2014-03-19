@@ -39,9 +39,9 @@
           <fieldset data-role="controlgroup">
             <legend>温度单位选择:</legend>
             <input type="radio" name="unit" id="celsius" value="c"/>
-            <label for="celsius">摄氏度（°C）</label>
+            <label for="celsius">摄氏度（&degC）</label>
             <input type="radio" name="unit" id="fahrenheit" value="f"/>
-            <label for="fahrenheit">华氏度（°F)</label>
+            <label for="fahrenheit">华氏度（&degF)</label>
           </fieldset>
         </div>
       </div>      
@@ -94,9 +94,6 @@
         $("#b-submit").click(function() {
           console.log("Submit");
           document.location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(saveOptions()));
-         // console.log("Warping to: " + location);
-         // console.log(location);
-         // document.location = location;
                                          });  
        
         $('#gps').val(getQueryVariable('gps')).change();
@@ -106,7 +103,7 @@
         } else {
           $('input:radio[name=unit][value=f]').prop('checked', true).trigger("click");
         }
-        // Disable location field based on GPS toggle
+       
         $('#city').prop('disabled', $('#gps').val() == "on");
         $('#gps').change(function() {
           $('#city').prop('disabled', $('#gps').val() == "on");
