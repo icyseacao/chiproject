@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
   <head>
-    <title>Configure</title>
+    <title>Configurable</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     //<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,41 +17,41 @@
   <body>
     <div data-role="page" id="main">
       <div data-role="header" class='jqm-header' data-theme="b" data-position="fixed">
-        <h1>���̲�������</h1> 
+        <h1>表盘参数设置</h1> 
       </div>
 
       <div data-role="content">  
                    
        <div data-role="fieldcontain">
-          <label for="gps">GPS ����/�ر�</label>
+          <label for="gps">GPS 运行/关闭</label>
           <select name="gps" id="gps" data-role="slider" data-highlight="true" data-track-theme="d">
-            <option value="off">��</option>
-            <option value="on">��</option>
+            <option value="off">关</option>
+            <option value="on">开</option>
           </select>
         </div>
         
         <div data-role="fieldcontain">
-          <label for="city">��������(Ӣ������ƴ��):</label>
+          <label for="city">城市名称(英文名或拼音):</label>
           <textarea cols="20" rows="1" name="city" id="city"></textarea>
         </div>
        
         <div data-role="fieldcontain">
           <fieldset data-role="controlgroup">
-            <legend>�¶ȵ�λѡ��:</legend>
+            <legend>温度单位选择:</legend>
             <input type="radio" name="unit" id="celsius" value="c"/>
-            <label for="celsius">���϶ȣ�C��</label>
+            <label for="celsius">摄氏度（C）</label>
             <input type="radio" name="unit" id="fahrenheit" value="f"/>
-            <label for="fahrenheit">���϶ȣ�F)</label>
+            <label for="fahrenheit">华氏度（F)</label>
           </fieldset>
         </div>
       </div>      
       <div class="ui-body ui-body-c">
             <fieldset class="ui-grid-a">
               <div class="ui-block-a"> 
-         <button type="submit" data-theme="e" id="b-cancel">ȡ��</button>                       
+         <button type="submit" data-theme="e" id="b-cancel">取消</button>                       
               </div> 
               <div class="ui-block-b">
-         <button type="submit" data-theme="b" id="b-submit">�ύ</button>
+         <button type="submit" data-theme="b" id="b-submit">提交</button>
               </div>
             </fieldset>
       </div>       
