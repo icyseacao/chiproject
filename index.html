@@ -39,6 +39,14 @@
             <label for="fahrenheit">华氏度（&degF）</label>
           </fieldset>
         </div>
+        
+        <div data-role="fieldcontain">
+          <label for="vib">蓝牙断开震动提醒：</label>
+          <select name="vib" id="vib" data-role="slider" data-highlight="true" data-track-theme="d">
+            <option value="1">弱震一次</option>
+            <option value="3">强震三次</option>
+          </select>
+        </div>
       </div>      
       <div class="ui-body ui-body-c">
             <fieldset class="ui-grid-a">
@@ -76,7 +84,8 @@
            'gps': $("#gps").val(),
            'city': $("#city").val(),
            'unit': $('input:radio[name=unit]:checked').val(),                                                      
-                       }
+           'vib': $("#vib").val(), 
+                     }
         return options;
       }
 
@@ -98,7 +107,8 @@
         } else {
           $('input:radio[name=unit][value=f]').prop('checked', true).trigger("click");
         }
-       
+
+        $('#vib').val(getQueryVariable('vib')).change();
         $('#city').prop('disabled', $('#gps').val() == "on");
         $('#gps').change(function() {
           $('#city').prop('disabled', $('#gps').val() == "on");
