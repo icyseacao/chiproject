@@ -41,7 +41,9 @@
         </div>
         
         <div data-role="fieldcontain">
-          <label for="vib">手机蓝牙断联震动强度:</label>
+          <label for="vib">蓝牙断开震动强度(0-3):</label>
+            <input type="range" name="vib" id="vib" min="0" max="3" data-highlight="true">  
+ 
             <select name="vib" id="vib" data-role="slider" data-highlight="true" data-track-theme="d">
             <option value="1">弱震</option>
             <option value="3">强震</option>
