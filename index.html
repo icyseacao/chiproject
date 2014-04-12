@@ -27,7 +27,7 @@
         
         <div data-role="fieldcontain">
           <label for="city">城市名称(英文名或拼音):</label>
-          <input type="text" name="city" id="city" value="" />
+          <input type="text" name="city" id="city" value=""/>
         </div>
        
         <div data-role="fieldcontain">
@@ -42,12 +42,20 @@
         
         <div data-role="fieldcontain">
           <label for="vib">手机蓝牙断联震动强度：</label>
-          <select name="vib" id="vib" data-role="slider" data-highlight="true" data-track-theme="d">
+            <ul data-role="listview" data-inset="true" data-type="horizontal">
+              <input type="button" name="vib" id="vib" value="关闭"/> 
+              <input type="button" name="vib" id="vib" value="弱震"/> 
+              <input type="button" name="vib" id="vib" value="强震"/> 
+            </ul>
+ 
+
+        /*  <select name="vib" id="vib" data-role="slider" data-highlight="true" data-track-theme="d">
             <option value="1" data-theme="e">弱震</option>
             <option value="3">强震</option>
-          </select>
+          </select> */
         </div>
       </div>      
+
       <div class="ui-body ui-body-c">
             <fieldset class="ui-grid-a">
               <div class="ui-block-a"> 
