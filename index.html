@@ -43,7 +43,14 @@
         <div data-role="fieldcontain">
           <label for="vib">蓝牙断开震动强度(0-3):</label>
             <input type="range" name="vib" id="vib" min="0" max="3" data-highlight="true"/>  
-                    
+        </div>
+        
+        <div data-role="fieldcontain">
+          <label for="health">健康提醒设置:</label>
+          <select name="health" id="health" data-role="slider" data-highlight="true" data-track-theme="d">
+            <option value="off">关</option>
+            <option value="on">开</option>
+          </select>
         </div>
       </div>      
 
@@ -83,7 +90,8 @@
            'gps': $("#gps").val(),
            'city': $("#city").val(),
            'unit': $('input:radio[name=unit]:checked').val(),                                                      
-           'vib': $("#vib").val(), 
+           'vib': $("#vib").val(),
+           'health': $("#health").val(), 
                      }
         return options;
       }
@@ -106,6 +114,7 @@
         } else {
           $('input:radio[name=unit][value=f]').prop('checked', true).trigger("click");
         }
+        $('#health').val(getQueryVariable('health')).change();
 
         $('#vib').val(getQueryVariable('vib')).change();
         $('#city').prop('disabled', $('#gps').val() == "on");
